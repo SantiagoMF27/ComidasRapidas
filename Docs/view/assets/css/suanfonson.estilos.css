@@ -1,0 +1,1578 @@
+/*Estiilos del menú de todas las vistas*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    transition: 0.5s;
+}
+
+header a img {
+    width: 50px;
+}
+
+header a {
+    display: flex;
+}
+
+header a h4 {
+    margin-left: 10px;
+}
+
+header.sticky {
+    background: rgb(255, 255, 255);
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.185);
+}
+
+header .logo {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+header.sticky .logo {
+    color: rgb(8, 8, 8);
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+}
+
+.productos-agregados-carrito {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    color: rgb(241, 0, 0);
+}
+
+header.sticky .productos-agregados-carrito {
+    background-color: rgb(196, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+header.sticky .productos-agregados-carrito:hover {
+    background-color: rgb(231, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+header ul li a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+header.sticky ul li a {
+    color: rgb(0, 0, 0);
+}
+
+header.sticky ul li a:hover {
+    color: rgb(58, 58, 58);
+}
+
+@media (max-width: 991px) {
+
+    header,
+    header.sticky {
+        padding: 20px 50px;
+        z-index: 1000;
+
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    header ul li a {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    header ul li a:hover {
+        color: rgb(58, 58, 58);
+    }
+
+    header .productos-agregados-carrito {
+        background-color: rgb(196, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url(../img/icon/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .toggle.active {
+        width: 40px;
+        height: 40px;
+        background: url(../img/icon/cerrar_menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+
+    header.sticky .toggle {
+        filter: invert(1);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header,
+    header.sticky {
+        padding: 20px 20px;
+    }
+}
+
+.formulario-registro input[type="text"]:invalid,
+.formulario-registro input[type="email"]:invalid,
+.formulario-registro input[type="password"]:invalid,
+.formulario-ingresar input[type="text"]:invalid,
+.formulario-ingresar input[type="password"]:invalid,
+.formulario-contacto input[type="text"]:invalid,
+.formulario-contacto input[type="email"]:invalid,
+.input-canntidad input[type="text"]:invalid {
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.formulario-registro input[type="text"]:valid,
+.formulario-registro input[type="email"]:valid,
+.formulario-registro input[type="password"]:valid,
+.formulario-ingresar input[type="text"]:valid,
+.formulario-ingresar input[type="password"]:valid,
+.formulario-contacto input[type="text"]:valid,
+.formulario-contacto input[type="email"]:valid,
+.input-canntidad input[type="text"]:valid {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+/*Estilos de todos los fondos*/
+.portada-ini {
+    width: 100%;
+    height: 680px;
+    background: -webkit-linear-gradient(to right, hsla(324, 56%, 35%, 0.808), rgba(63, 180, 17, 0.774)),
+        url(../../assets/img/image/portada_index.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 53%, 32%, 0.808), hsla(35, 84%, 36%, 0.808)),
+        url(../../assets/img/image/portada_index.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.ingresar {
+    width: 100%;
+    height: 695px;
+    background: -webkit-linear-gradient(to right, hsla(324, 56%, 35%, 0.808), rgba(63, 180, 17, 0.774)),
+        url(../../assets/img/image/portada_ingresar.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 53%, 32%, 0.808), hsla(35, 84%, 36%, 0.808)),
+        url(../../assets/img/image/portada_ingresar.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.registrarse {
+    width: 100%;
+    height: 695px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.692), rgba(73, 211, 18, 0.658)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.685), hsla(35, 84%, 45%, 0.705)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contacto {
+    width: 100%;
+    height: 650px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.76), rgba(73, 211, 18, 0.774)),
+        url(../../assets/img/image/portada_contacto.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.808), hsla(35, 84%, 45%, 0.822)),
+        url(../../assets/img/image/portada_contacto.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.informacion {
+    width: 100%;
+    height: auto;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.692), rgba(73, 211, 18, 0.658)),
+        url(../../assets/img/image/portada_info.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.685), hsla(35, 84%, 45%, 0.705)),
+        url(../../assets/img/image/portada_info.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.portada-ini-user {
+    width: 100%;
+    height: 680px;
+    background: -webkit-linear-gradient(to right, hsla(324, 56%, 35%, 0.692), rgba(63, 180, 17, 0.658)),
+        url(../../assets/img/image/portada_index.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 53%, 32%, 0.685), hsla(35, 84%, 36%, 0.705)),
+        url(../../assets/img/image/portada_index.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.mis_datos {
+    width: 100%;
+    height: 670px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.808), rgba(73, 211, 18, 0.774)),
+        url(../../assets/img/image/portada_datos.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.808), hsla(35, 84%, 45%, 0.822)),
+        url(../../assets/img/image/portada_datos.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.portada-admin {
+    width: 100%;
+    height: 680px;
+    background: -webkit-linear-gradient(to right, hsla(324, 56%, 35%, 0.692), rgba(63, 180, 17, 0.658)),
+        url(../../assets/img/image/portada_index.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 53%, 32%, 0.685), hsla(35, 84%, 36%, 0.705)),
+        url(../../assets/img/image/portada_index.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.actualizar-productos {
+    width: 100%;
+    height: 1150px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.808), rgba(73, 211, 18, 0.774)),
+        url(../../assets/img/image/portada_ingresar.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.808), hsla(35, 84%, 45%, 0.822)),
+        url(../../assets/img/image/portada_ingresar.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.actualizar-user {
+    width: 100%;
+    height: 1050px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.808), rgba(73, 211, 18, 0.774)),
+        url(../../assets/img/image/portada_contacto.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.808), hsla(35, 84%, 45%, 0.822)),
+        url(../../assets/img/image/portada_contacto.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.actualizar-cli {
+    width: 100%;
+    height: 900px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.808), rgba(73, 211, 18, 0.774)),
+        url(../../assets/img/image/portada_info.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.808), hsla(35, 84%, 45%, 0.822)),
+        url(../../assets/img/image/portada_info.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.actualizar-imagen {
+    width: 100%;
+    height: 830px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.808), rgba(73, 211, 18, 0.774)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.808), hsla(35, 84%, 45%, 0.822)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.agregar-producto {
+    width: 100%;
+    height: 695px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.692), rgba(73, 211, 18, 0.658)),
+        url(../../assets/img/image/portada_ingresar.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.685), hsla(35, 84%, 45%, 0.705)),
+        url(../../assets/img/image/portada_ingresar.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.agregar-usuario {
+    width: 100%;
+    height: 695px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.692), rgba(73, 211, 18, 0.658)),
+        url(../../assets/img/image/portada_contacto.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.685), hsla(35, 84%, 45%, 0.705)),
+        url(../../assets/img/image/portada_contacto.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.agregar-imagen-pro {
+    width: 100%;
+    height: 695px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.692), rgba(73, 211, 18, 0.658)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.685), hsla(35, 84%, 45%, 0.705)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.detalles-productos {
+    width: 100%;
+    height: 650px;
+    background: -webkit-linear-gradient(to right, hsla(324, 54%, 43%, 0.692), rgba(73, 211, 18, 0.658)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(324, 54%, 43%, 0.685), hsla(35, 84%, 45%, 0.705)),
+        url(../../assets/img/image/portada_registrar.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.portada-ini,
+.ingresar,
+.registrarse,
+.contacto,
+.informacion,
+.portada-ini-user,
+.mis_datos,
+.portada-admin,
+.actualizar-productos,
+.agregar-producto,
+.actualizar-user,
+.actualizar-cli,
+.actualizar-imagen,
+.agregar-usuario,
+.agregar-imagen-pro,
+.detalles-productos,
+.contenedor-comprobacion-compra {
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/*Estilos de la vista de inicio*/
+.portada-titulo-ini {
+    display: flex;
+    height: 480px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.377);
+}
+
+.subtitulo-ini {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.subtitulo-ini h2 {
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    color: rgb(96, 0, 134);
+}
+
+@media (max-width: 1040px) {
+    .portada-titulo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .portada-titulo-ini {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .portada-titulo-ini h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .portada-titulo-ini {
+        font-size: 15px;
+    }
+}
+
+/*Estilos del formulario de ingresar*/
+.formulario-ingresar {
+    width: 500px;
+    height: 400px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 10px;
+}
+
+.formulario-ingresar input {
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+}
+
+.formulario-ingresar input[type="text"],
+.formulario-ingresar input[type="password"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-ingresar input::placeholder {
+    color: rgb(61, 61, 61);
+}
+
+.formulario-ingresar input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-ingresar input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.192);
+}
+
+.url {
+    text-decoration: none;
+}
+
+.url:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .formulario-ingresar {
+        width: 350px;
+    }
+}
+
+/*Estilos del formulario de Registro*/
+.formulario-registro {
+    width: 500px;
+    height: 500px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 10px;
+}
+
+.formulario-registro input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.formulario-registro input[type="text"],
+.formulario-registro input[type="email"],
+.formulario-registro input[type="password"],
+.formulario-registro input[type="number"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-registro input::placeholder {
+    color: rgb(61, 61, 61);
+}
+
+.formulario-registro input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-registro input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.192);
+}
+
+
+.url {
+    text-decoration: none;
+}
+
+.url:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .formulario-registro {
+        width: 350px;
+    }
+}
+
+/*Estilos del formulario de Contacto*/
+.formulario-contacto {
+    width: 500px;
+    height: 550px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 5px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 10px;
+    margin-top: 70px;
+}
+
+.formulario-contacto input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-contacto textarea {
+    width: 80%;
+    height: 240px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    resize: none;
+    font-size: 20px;
+    background: transparent;
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+    color: rgb(61, 61, 61);
+}
+
+.formulario-contacto input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-contacto input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.192);
+}
+
+@media (max-width: 600px) {
+    .contacto {
+        height: 600px;
+    }
+
+    .formulario-contacto h2 {
+        font-size: 20px;
+    }
+
+    .formulario-contacto {
+        width: 350px;
+        height: 450px
+    }
+
+    .formulario-contacto textarea {
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contacto {
+        height: 600px;
+    }
+
+    .formulario-contacto h2 {
+        font-size: 20px;
+    }
+
+    .formulario-contacto {
+        width: 350px;
+        height: 450px
+    }
+
+    .formulario-contacto textarea {
+        height: 150px;
+    }
+}
+
+/*Estilos de la vista de informacion*/
+.contenido {
+    padding: 100px;
+    top: 75px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+}
+
+.contenidoBx {
+    padding-right: 30px;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.452);
+}
+
+.contenidoBx h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+
+}
+
+.contenidoBx p {
+    font-size: 18px;
+
+}
+
+.w50 {
+    min-width: 50%;
+}
+
+.w50 img {
+    max-width: 90%;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.w50 img:hover {
+    padding: 0;
+}
+
+.boveda.blanco {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.452);
+}
+
+.boveda.blanco p {
+    font-size: 18px;
+}
+
+.services .contenido {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .contenido .servicesBx {
+    max-width: 320px;
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.services .contenido .servicesBx:hover {
+    padding: 0;
+}
+
+.services .contenido .servicesBx img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (max-width: 991px) {
+    .boveda h2 {
+        font-size: 24px;
+    }
+
+    .contenidoBx h3 {
+        font-size: 20px;
+    }
+
+    .contenido {
+        flex-direction: column;
+    }
+
+    .w50 {
+        margin-bottom: 20px;
+    }
+
+    .services .contenido .servicesBx {
+        margin: 10px;
+    }
+}
+
+
+/*Estilos de la vista de inicio de usuario*/
+.portada-titulo-ini-user {
+    display: flex;
+    height: 480px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.377);
+}
+
+.subtitulo-ini-user {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.subtitulo-ini-user h2 {
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    color: rgb(96, 0, 134);
+}
+
+@media (max-width: 1040px) {
+    .portada-titulo-ini-user {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .portada-titulo-ini-user {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .portada-titulo-ini-user h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .portada-titulo-ini-user {
+        font-size: 15px;
+    }
+}
+
+
+/*Estilos de la pagina de Mis Datos*/
+.datos-ini {
+    width: 500px;
+    height: 500px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 25px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.datos-ini h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.datos-ini ul {
+    padding: 10px;
+}
+
+.datos-ini ul li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.datos-ini ul li strong {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.actualizar-datos {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    text-align: center;
+}
+
+.actualizar-datos a {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.actualizar-datos a img {
+    width: 100px;
+    height: auto;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.actualizar-datos a img {
+    width: 100px;
+    height: auto;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.actualizar-datos a img:hover {
+    padding: 10px;
+    filter: invert(1);
+}
+
+.actualizar-mis-datos {
+    width: 400px;
+    height: 500px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+}
+
+#actual-from {
+    display: none;
+}
+
+.actualizar-mis-datos input {
+    width: 90%;
+    padding: 10px;
+    margin: 15px;
+}
+
+.actualizar-mis-datos input[type="text"],
+.actualizar-mis-datos input[type="email"],
+.actualizar-mis-datos input[type="password"],
+.actualizar-mis-datos input[type="number"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+
+.actualizar-mis-datos input::placeholder {
+    color: rgb(54, 54, 54);
+}
+
+.actualizar-mis-datos input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(196, 164, 240);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.actualizar-mis-datos input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.192);
+}
+
+#cerrar {
+    font-size: 1.1em;
+    background-color: rgb(160, 0, 0);
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin-left: 93%;
+    top: 0px;
+    color: white;
+    padding: 1px 1px;
+    cursor: pointer;
+    padding-left: 8px;
+}
+
+#cerrar:hover {
+    background-color: rgb(236, 0, 0);
+}
+
+@media (max-width: 992px) {
+    .mis_datos {
+        height: 600px;
+    }
+
+    .datos-ini {
+        width: 500px;
+        height: 400px;
+        top: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mis_datos {
+        height: 550px;
+    }
+
+    .datos-ini {
+        width: 350px;
+        height: 400px;
+    }
+
+    .datos-ini h1 {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .datos-ini ul li strong {
+        font-size: 15px;
+    }
+
+    .datos-ini ul li {
+        font-size: 15px;
+    }
+}
+
+
+/*Estilos de la vista de inicio de Administrador*/
+.portada-titulo-admin {
+    display: flex;
+    height: 480px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.377);
+}
+
+.inner-join {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .portada-titulo-admin {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 602px) {
+    .portada-titulo-admin {
+        font-size: 25px;
+    }
+
+    .portada-admin {
+        height: 680px;
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 400px) {
+    .portada-titulo-admin {
+        font-size: 15px;
+    }
+}
+
+/*Estilos del formulario de Actualizar Productos*/
+.formulario-actualizar-pro {
+    width: 500px;
+    height: 1050px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 20px;
+}
+
+.formulario-actualizar-pro input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.formulario-actualizar-pro h2 {
+    text-align: center;
+}
+
+.actualizar-label {
+    padding: 5px;
+    font-size: 10px;
+    text-align: left;
+}
+
+.formulario-actualizar-pro input[type="number"],
+.formulario-actualizar-pro input[type="text"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-actualizar-pro input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-actualizar-pro input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.329);
+}
+
+.url-actual {
+    text-decoration: none;
+    padding-left: 35%;
+    color: rgb(68, 1, 155);
+}
+
+.url-actual:hover {
+    text-decoration: underline;
+    color: rgb(102, 9, 224);
+
+}
+
+/*Estilos del formulario de Actualizar Usuarios*/
+.formulario-actualizar-user {
+    width: 500px;
+    height: 900px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 15px;
+}
+
+.formulario-actualizar-user input {
+    width: 95%;
+    margin: 10px;
+}
+
+.formulario-actualizar-user h2 {
+    text-align: center;
+}
+
+.actualizar-label {
+    font-size: 20px;
+    text-align: left;
+}
+
+.formulario-actualizar-user input[type="number"],
+.formulario-actualizar-user input[type="text"],
+.formulario-actualizar-user input[type="email"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-actualizar-user input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-actualizar-user input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.329);
+}
+
+/*Estilos del formulario de Actualizar Clientes*/
+.formulario-actualizar-cli {
+    width: 500px;
+    height: 800px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 15px;
+}
+
+.formulario-actualizar-cli input {
+    width: 95%;
+    margin: 10px;
+}
+
+.formulario-actualizar-cli h2 {
+    text-align: center;
+}
+
+.actualizar-label {
+    font-size: 20px;
+    text-align: left;
+}
+
+.formulario-actualizar-cli input[type="number"],
+.formulario-actualizar-cli input[type="text"],
+.formulario-actualizar-cli input[type="email"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-actualizar-cli input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-actualizar-cli input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.329);
+}
+
+
+/*Estilos de actualizar Imagene*/
+.formulario-actualizar-imgen {
+    width: 500px;
+    height: 730px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 20px;
+}
+
+.formulario-actualizar-imgen input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.formulario-actualizar-imgen h2 {
+    text-align: center;
+}
+
+
+.formulario-actualizar-imgen input[type="number"],
+.formulario-actualizar-imgen input[type="text"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-actualizar-imgen input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-actualizar-imgen input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.329);
+}
+
+.conten-ver-imagen {
+    text-align: center;
+}
+
+.ver-editar-imagen {
+    width: 45%;
+    height: 135px;
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.ver-editar-imagen:hover {
+    padding: 0;
+}
+
+
+.url-actual {
+    text-decoration: none;
+    padding-left: 35%;
+    color: rgb(68, 1, 155);
+}
+
+.url-actual:hover {
+    text-decoration: underline;
+    color: rgb(102, 9, 224);
+
+}
+
+
+/*Estilos del formulario de Agregar Usuario*/
+.formulario-usuario {
+    width: 500px;
+    height: 540px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 10px;
+}
+
+.registrase-form input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.formulario-usuario input[type="text"],
+.formulario-usuario input[type="email"],
+.formulario-usuario input[type="password"],
+.formulario-usuario input[type="number"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-usuario input::placeholder {
+    color: rgb(61, 61, 61);
+}
+
+.formulario-usuario input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-usuario input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.329);
+}
+
+@media (max-width: 600px) {
+    .formulario-usuario {
+        width: 350px;
+    }
+}
+
+/*Estilos del formulario de Agregar imagen*/
+.formulario-imagen {
+    width: 500px;
+    height: 400px;
+    background: rgba(196, 196, 196, 0.589);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 10px;
+}
+
+.formulario-imagen input[type="text"],
+.formulario-imagen input[type="number"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.formulario-imagen input::placeholder {
+    color: rgb(61, 61, 61);
+}
+
+.formulario-imagen input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(229, 210, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.formulario-imagen input[type="submit"]:hover {
+    background-color: rgb(137, 46, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.329);
+}
+
+@media (max-width: 600px) {
+    .formulario-imagen {
+        width: 350px;
+    }
+}
+
+/*Estilos para la vista de detalles de productos*/
+.detalles-contenedor {
+    width: 90%;
+    height: auto;
+    position: absolute;
+    top: 75px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(196, 196, 196, 0.705);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.623);
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.producto-md {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding: 15px;
+}
+
+.img-producto {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img-producto:hover {
+    padding: 0;
+}
+
+/*Ola*/
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*Estilos del footer de todas las vistas*/
+.footer-contenido {
+    background: #525151;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-pagina {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.contenedor-footer {
+    text-align: center;
+}
+
+.contenedor-footer h4 {
+    color: rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(178, 42, 212);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.contenedor-footer p {
+    color: rgb(204, 204, 204);
+}
+
+.contenedor-footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.contenedor-footer a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.coyrigth-footer {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px;
+    color: rgb(175, 175, 175);
+}
+
+@media (max-width: 600px) {
+    .contenedor-footer {
+        display: block;
+    }
+
+    .contenedor-footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedor-footer {
+        display: block;
+    }
+
+    .contenedor-footer p {
+        font-size: 10px;
+    }
+
+    .coyrigth-footer {
+        font-size: 10px;
+    }
+}
+
+
+/*Proyecto-Final-SENA-2020*/
+/*Sitio Web de Comidas Rapidas Suanfonson*/
+/*Santiago Manosalva Fernandez*/
+/*Johann Alvarez Escobar*/
+/*John Bayro Graciano Usuga*/
+/*Copyright © Todos los derechos reservados*/
